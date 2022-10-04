@@ -1,0 +1,59 @@
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c = []
+for i in a:
+    if i in c:
+        for j in b:
+            if i == j:
+                c.append(i)
+                break
+print(c)
+
+
+
+my_dict = {'a':500, 'b':5874, 'c': 560,'d':400, 'e':5874, 'f': 20, 'g':-10}
+v = sorted(my_dict, key=my_dict.get)[-3:]
+print(v)
+
+
+
+str = input()
+slovo = input()
+listslovo = list(slovo)
+liststroka = list(str)
+s = 0
+vrems=0
+kol = len(listslovo)
+for i in range(len(liststroka)):
+    if kol==vrems:
+        s+=1
+        vrems = 0
+    elif liststroka[i]==listslovo[vrems]:
+        vrems+=1
+    else:
+        vrems = 0
+if kol == vrems:
+    s+=1
+print(s)
+
+
+
+def kol(a):
+    b = 0
+    while a>0:
+        a = a//10
+        b+=1
+    return(b)
+def dvu(a):
+    if kol(a)==2 and a%11==0:
+        return(a)
+    else:
+        return (0)
+s = [1,2,3,4,16,12,99] #исходный список
+kv = [s[i]**2 for i in range(len(s))]
+od = [s[i]%11 for i in range(len(s))]
+chet = [s[i] for i in range(len(s)) if s[i]%2==0]
+kolvo = [s[i] for i in range(len(s)) if kol(s[i])%2!=0]
+dvuz = [s[i] for i in range(len(s)) if dvu(s[i])!=0]
+ne3 = [s[i] for i in range(len(s)) if i%3!=0]
+print(kv,"\n",od,'\n',chet,'\n',kolvo,'\n',dvuz,"\n",ne3)
