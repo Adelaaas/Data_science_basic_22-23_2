@@ -1,0 +1,6 @@
+str = 'Hello World'
+a = list(str)
+for i in range(3,8):
+    f = a[i]
+    print(f.upper())
+    5 задание
