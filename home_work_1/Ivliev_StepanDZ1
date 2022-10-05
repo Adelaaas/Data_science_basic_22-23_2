@@ -8,7 +8,7 @@ for i in a:
     list.append(i)
     print(i)
 
-2)
+4)
 a = input()
 b = input()
 print(a.count(b))
