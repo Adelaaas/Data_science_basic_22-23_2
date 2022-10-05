@@ -1,0 +1,16 @@
+"""Задача №2"""
+x=input()
+x=x.split(", ")
+dist={}
+for word in x:
+    dist[word]= dist.get(word, 0)+1
+print(dist)
+
+"Задача №3"""
+x=float(input())
+y=float(input())
+r=float(input())
+A=x**2+y**2
+if A<=r:
+    print ("ТОчка принадлежит кругу")
+else: print("Точка не принадлежит кругу")
