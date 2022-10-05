@@ -1,0 +1,17 @@
+1. s = input()
+print(s[2])
+print(s[-2])
+print(s[:5])
+print(s[:-2])
+print(s[::2])
+print(s[1::2])
+print(s[::-1])
+print(s[::-2])
+print(len(s))
+2. 
+a = [int(i) for i in input().split()]
+counter = 0
+for i in range(1, len(a) - 1):
+    if a[i - 1] < a[i] > a[i + 1]:
+        counter += 1
+print(counter)
