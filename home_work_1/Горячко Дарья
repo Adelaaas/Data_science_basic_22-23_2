@@ -30,4 +30,3 @@ mass = list(map(int, input().split()))
        
         [print(i, end=' ') if i % 2 == 0 else '' for i in mass]
         
-        [print(i, end=' ') if len(str(i)) % 2 == 1 else '' for i in mass]
