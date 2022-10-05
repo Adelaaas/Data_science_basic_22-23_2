@@ -1,0 +1,33 @@
+1)
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c = []
+for i in a:
+    if i in c:
+        continue
+    for j in b:
+        if i == j:
+            c.append(i)
+            break
+ 
+print(c)
+
+
+2)
+my_dict = {'a':500, 'b':5874, 'c': 560,'d':400, 'e':5874, 'f': 20, 'g':-10}
+r = sorted(my_dict, key=my_dict.get, reverse=True)[:3]
+print®
+3)
+a = input()
+        b = input(),
+        print(a.count(b))
+4)
+mass = list(map(int, input().split()))
+        
+        [print(i * i, end=' ') for i in mass]
+       
+        [print(i % 11, end=' ') for i in mass]
+       
+        [print(i, end=' ') if i % 2 == 0 else '' for i in mass]
+        
+        [print(i, end=' ') if len(str(i)) % 2 == 1 else '' for i in mass]
