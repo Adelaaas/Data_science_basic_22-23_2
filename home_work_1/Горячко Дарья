@@ -17,10 +17,7 @@ print(c)
 my_dict = {'a':500, 'b':5874, 'c': 560,'d':400, 'e':5874, 'f': 20, 'g':-10}
 r = sorted(my_dict, key=my_dict.get, reverse=True)[:3]
 print®
-3)
-a = input()
-        b = input(),
-        print(a.count(b))
+
 4)
 mass = list(map(int, input().split()))
         
