@@ -1,0 +1,40 @@
+№1
+start=int(input())
+stop=int(input())
+n=int(input())
+m=stop/start
+i=0
+f=m**(1/(n-1))
+print(f)
+while i!=n:
+    print(round(start, 3))
+    start=start*f
+    i+=1
+
+№2
+c = [[18, 7, 4, 5, 6], [9, 6, 3, 10, 2], [54, 19, 234, 56, 8]]
+b =[list(a) for a in list(zip(*c))]
+print(b)
+
+№3
+
+
+№4
+a=[17, 128, 536, 44]
+b=len(a)
+n=0
+i=0
+while i!=b:
+    d=[]
+    c=a[i]+1
+    while (c-2**n)>0:
+        n+=1
+    while n>-1:
+        if c-2**n>0:
+            c=c-2**n
+            d.append(1)
+        else:
+            d.append(0)
+        n-=1
+    i+=1
+    print(d[1:])
