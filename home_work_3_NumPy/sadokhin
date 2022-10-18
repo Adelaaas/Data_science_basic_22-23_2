@@ -1,0 +1,17 @@
+import math
+import numpy as np
+
+st = int(input())
+sp = int(input())
+n = int(input())
+
+q = pow(sp/st, 1/(n-1))
+
+a = np.array([1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9])
+i = 0
+a[0] = st/q
+while i < n:
+    a[i] *= q
+    i += 1
+
+print(a)
