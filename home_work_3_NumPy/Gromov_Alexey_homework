@@ -17,7 +17,18 @@ print(time(time1, time2))
 
 
 
-
+2.
+import numpy as np
+def matr(N,el1,d):
+	a = np.zeros((N,N))
+	for i in range(N):
+	    for j in range(N):
+		    a[i][j] = el1+d*i+d*j
+	return a
+N   = int(input())
+el1 = float(input())
+d   = float(input())
+print(matr(N,el1,d))
 
 
 
