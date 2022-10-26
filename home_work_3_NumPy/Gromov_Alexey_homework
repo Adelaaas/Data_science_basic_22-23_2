@@ -36,7 +36,7 @@ print(matr(N,el1,d))
 
 
 
-import numpy as np
+3.import numpy as np
 vvodmass = np.array([np.nan, 15, 13, 14, np.nan, 1, np.nan], float)
 def zap():
     global vvodmass
