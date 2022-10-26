@@ -33,22 +33,7 @@ print(matr(N,el1,d))
 
 
 
-3.
-import numpy as np
-vvodmass = np.array([np.nan, 15, 13, 14, np.nan, np.inf], float)
-def zap():
-    global vvodmass
-    k = 0
-    for i in range(vvodmass.shape[0]):
-        if np.isnan(vvodmass[i]) or np.isinf(vvodmass[i]):
-            vvodmass[i] = zamena
-            k += 1
-    return k
 
-
-zamena = float(input())
-print(zap())
-print(vvodmass)
 
 
 
