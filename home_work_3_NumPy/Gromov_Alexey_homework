@@ -36,7 +36,21 @@ print(matr(N,el1,d))
 
 
 
+import numpy as np
+vvodmass = np.array([np.nan, 15, 13, 14, np.nan, 1, np.nan], float)
+def zap():
+    global vvodmass
+    k = 0
+    for i in range(len(vvodmass)):
+        if np.isnan(vvodmass[i]):
+            vvodmass[i] = float(input())
+            k += 1
+    return k
 
+
+zamena = float(input())
+print(zap())
+print(vvodmass)
 
 
 
