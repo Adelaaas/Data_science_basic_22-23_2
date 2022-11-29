@@ -1,0 +1,22 @@
+1.x_train = pd.read_csv(Xtr)
+studs_info = pd.read_csv(studs)
+zachety = pd.read_csv(zach)
+y_train = pd.read_csv(Ytr)
+
+print(x_train.shape)
+print(studs_info.shape)
+print(zachety.shape)
+print(y_train.shape)
+2. train = pd.concat([x_train, y_train], axis=1)
+train
+3. studs_info.isna().sum()
+4. print(len(x_train['АТТЕСТАЦИЯ'].unique()))
+
+print('\n')
+
+x_train['АТТЕСТАЦИЯ'].value_counts()
+5. train.columns = train.columns.str.lower()
+
+train
+8. mapping = {'М': 0, 'Ж': 1}
+studs_info.replace({'Пол': mapping})
