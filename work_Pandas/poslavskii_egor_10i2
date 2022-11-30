@@ -1,0 +1,16 @@
+1.
+X_train = pd.read_csv(url1) studs_info = pd.read_csv(url2) zachety = pd.read_csv(url3) y_train = pd.read_csv(url4) print(X_train.shape) print(studs_info.shape) print(zachety.shape) print(y_train.shape)
+2.
+train = pd.concat([y_train, X_train], axis=1) 
+train
+3.
+studs_info.isna().sum()
+5.
+train.columns = train.columns.str.lower() 
+train
+6.
+train_h = pd.DataFrame(train.направление.str.split(' ', 1).tolist(), columns = ['код направления','название направления']) train = pd.concat([train, train_h], axis=1) train = train.drop('направление', axis=1) train
+7.
+aloxa = studs_info[studs_info['Пол'] == "М"] id = aloxa['STD_ID'].values pip = train.loc[~train['std_id'].isin(id)] six = pip[pip['курс'] == 3.0] six
+8.
+stdh2 = pd.DataFrame(studs_info['Пол'].map({'Ж': 1, 'М': 0})) stdh3 = studs_info.drop('Пол', axis=1) stdh2 = pd.concat([stdh3, stdh2], axis=1) stdh2
