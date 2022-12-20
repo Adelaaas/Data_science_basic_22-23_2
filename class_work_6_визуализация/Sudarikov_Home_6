@@ -1,0 +1,68 @@
+№ 1 2 3 4
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import pandas as pd
+import random
+
+x = [18, 13, 19, 14, 2, 11, 2, -30, 10, 1, 8, 11, 18, 15, 50]
+y = [7, 9, 19, 13, 2, 17, 20, -40, 9, 10, 18, 3, 2, 2, 80]
+z = [0.203, 0.443, 0.603, 0.879, 0.871, 0.164, 0.078, 0.766, 0.353, 0.949, 0.391, 0.2, 0.094, 0.692, 0.992]
+
+fig, ax = plt.subplots(2, 2)
+# 1
+ax[0, 0].plot(x, y)
+# 2
+ax[1, 0].scatter(x, y)
+# 3
+ax[0, 1].hist(x)
+# 4
+ax[1, 1].hist(y)
+
+plt.show()
+
+№ 5
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import pandas as pd
+import random
+
+x = [18, 13, 19, 14, 2, 11, 2, -30, 10, 1, 8, 11, 18, 15, 50]
+y = [7, 9, 19, 13, 2, 17, 20, -40, 9, 10, 18, 3, 2, 2, 80]
+z = [0.203, 0.443, 0.603, 0.879, 0.871, 0.164, 0.078, 0.766, 0.353, 0.949, 0.391, 0.2, 0.094, 0.692, 0.992]
+
+fig, ax = plt.subplots()
+sns.boxplot(x, ax=ax, width=0.3)
+plt.show()
+
+№ 6
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import pandas as pd
+import random
+
+x = [18, 13, 19, 14, 2, 11, 2, -30, 10, 1, 8, 11, 18, 15, 50]
+y = [7, 9, 19, 13, 2, 17, 20, -40, 9, 10, 18, 3, 2, 2, 80]
+z = [0.203, 0.443, 0.603, 0.879, 0.871, 0.164, 0.078, 0.766, 0.353, 0.949, 0.391, 0.2, 0.094, 0.692, 0.992]
+
+fig, ax = plt.subplots()
+sns.boxplot(y, ax=ax, width=0.3)
+plt.show()
+
+№ 7
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import pandas as pd
+import random
+
+x = [18, 13, 19, 14, 2, 11, 2, -30, 10, 1, 8, 11, 18, 15, 50]
+y = [7, 9, 19, 13, 2, 17, 20, -40, 9, 10, 18, 3, 2, 2, 80]
+z = [0.203, 0.443, 0.603, 0.879, 0.871, 0.164, 0.078, 0.766, 0.353, 0.949, 0.391, 0.2, 0.094, 0.692, 0.992]
+
+data=pd.DataFrame({"x":x,"y":y, "z":z})
+plt.figure(figsize=(12,10), dpi= 80)
+sns.heatmap(data.corr(), xticklabels=data.corr().columns, yticklabels=data.corr().columns, cmap='RdYlGn', center=0, annot=True)
+plt.show()
