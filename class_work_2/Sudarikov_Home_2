@@ -1,0 +1,55 @@
+
+№1
+
+import math
+def distance(a,b,c,d):
+    e = math.sqrt((b-a)**2+(d-c)**2)
+    return e
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+f=distance(a,b,c,d)
+print(f)
+№2
+def season(month):
+    global s
+    if month  == 1 or month == 2 or month == 12:
+        print("Зима")
+    if month == 3 or month == 4 or month == 5:
+        print("Весна")
+    if month == 6 or month ==7 or month ==8:
+        print ("Лето")
+    if month == 9 or month ==10 or month ==11:
+        print("Осень")
+
+s = int(input())
+season(s)
+
+№3
+def is_prime(a):
+    b=0
+    if a > 0:
+        for i in range(2, a):
+            if a%i == 0:
+                b = +1
+    return b
+a = int(input())
+d=is_prime(a)
+if d==0:
+    print ("True")
+else:
+    print ("False")
+
+№5
+a = 'Привет мир!'
+b = list(a)
+for i in range(3,8):
+    c = b[i]
+    print(c.upper())
+
+№7
+for i in range(0,500):
+  if i%7==0:
+    if i%10==8 or (i//10)%10==8 or (i//100)%10==8:
+      print(i)
