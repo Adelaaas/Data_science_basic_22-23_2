@@ -24,12 +24,8 @@ kmeans.fit(X)
 Y_pred = kmeans.labels_
 X['cluster'] = Y_pred
 
-# X[строки, столбцы]
-# plt.plot(x,y)
 plt.plot(X[X['cluster']==0]['x'], X[X['cluster']==0]['y'], 'bo', label='class1')
-
 plt.plot(X[X['cluster']==1]['x'], X[X['cluster']==1]['y'], 'go', label='class2')
-
 plt.plot(X[X['cluster']==2]['x'], X[X['cluster']==2]['y'], 'ro', label='class3')
 
 plt.xlabel('SepalLengthCm')
