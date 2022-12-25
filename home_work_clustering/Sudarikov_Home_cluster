@@ -1,0 +1,101 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import silhouette_samples, silhouette_score
+from scipy.cluster.hierarchy import dendrogram, linkage, fcluster
+from sklearn import datasets
+from sklearn.cluster import KMeans
+
+df = pd.read_csv('https://raw.githubusercontent.com/Adelaaas/Data_science_basic_22-23_2/main/home_work_clustering/segmentation%20data.csv')
+
+# plt.scatter(df['Age'], df['Income'])
+# plt.xlabel("Age")
+# plt.ylabel("Income")
+# plt.title("Точечный график")
+# #plt.show()
+#Большество людей имеют доход от 50000 до 175000 и возраст от 20 до 45
+
+# plt.figure(figsize=(15,6))
+# sns.displot(
+#     data=df.isna().melt(value_name="missing"),
+#     y="variable",
+#     hue="missing",
+#     multiple="fill",
+#     aspect=3
+# )
+# plt.title("Анализ пустых значений")
+# plt.show()
+# Нет пропусков
+
+# fig, axes = plt.subplots(1, 2, figsize=(15, 6))
+#
+# sns.boxplot(df['Age'], ax=axes[0], width=0.3)
+# sns.boxplot(df['Income'], ax=axes[1], width=0.3)
+#
+# axes[0].set_title("Boxplot возраст")
+# axes[1].set_title("Boxplot доход")
+#
+# plt.show()
+# Из общей массы выбиваются люди старше 64 лет и люди доходом свыше 197 тысяч
+
+# fig, axes = plt.subplots(1, 2, figsize=(15,6))
+# sns.barplot(data=df, ax=axes[0], x="Sex", y="Income")
+# sns.barplot(data=df, ax=axes[1], x="Sex", y="Age")
+#
+# axes[0].set_title("barplot доход от пола")
+# axes[1].set_title("barploat возраст от пола")
+#
+# plt.show()
+#средний доход мужчины 127 тысяч, а женщины 113. Средний возраст мужчин 38 лет, а женщин 34
+
+# plt.figure(figsize=(12,10), dpi= 80)
+# sns.heatmap(df.corr(), xticklabels=df.corr().columns, yticklabels=df.corr().columns, cmap='RdYlGn', center=0, annot=True)
+#
+# plt.title('Матрица корреляции', fontsize=22)
+# plt.xticks(fontsize=12)
+# plt.yticks(fontsize=12)
+# plt.show()
+
+#№2
+# SSE = []
+#
+# for k in range(1, 9):
+#     kmeans = KMeans(n_clusters=k)
+#     kmeans.fit(df)
+#     SSE.append(kmeans.inertia_)
+#
+# plt.plot(range(1, 9), SSE, marker='s')
+# plt.xlabel('Кластеры')
+# plt.title("Метод логтя")
+# plt.ylabel('SSE')
+# # plt.show()
+
+
+# kmeans = KMeans(n_clusters=3)
+# kmeans.fit(df)
+# df['cluster'] = kmeans.labels_
+# fig, axes = plt.subplots(1, 2, figsize=(17,9))
+# 
+# axes[0].plot(df['Age'], df['Income'], 'ko')
+# axes[0].set_xlabel('Age', fontsize = 20)
+# axes[0].set_ylabel('Income',fontsize = 20)
+# axes[0].set_title("До", fontsize = 20)
+# 
+# axes[1].plot(df[df['cluster']== 0]['Age'], df[df['cluster']== 0]['Income'], 'go', label='class1')
+# axes[1].plot(df[df['cluster']== 1]['Age'], df[df['cluster']== 1]['Income'], 'ro', label='class2')
+# axes[1].plot(df[df['cluster']== 2]['Age'], df[df['cluster']== 2]['Income'], 'co', label='class3')
+# 
+# axes[1].set_xlabel('Age',fontsize=30)
+# axes[1].set_ylabel('Income',fontsize=20)
+# axes[1].set_title("После",fontsize=10)
+# plt.legend(loc=0)
+# plt.show()
+# В первый кластер попали люди зарабытывающие до 110000, во второй от 110000 до 165000, в третий от 165000
+
+# Z = linkage(df, 'ward')
+# fig = plt.figure(figsize=(10, 10))
+# dn = dendrogram(Z)
+# plt.title("Дендрограмма")
+#
+# plt.show()
