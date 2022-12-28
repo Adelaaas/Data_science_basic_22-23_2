@@ -1,0 +1,57 @@
+Дз по кластеризации.
+1.1 
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+url = 'https://raw.githubusercontent.com/Adelaaas/Data_science_basic_22-23_2/main/home_work_clustering/segmentation%20data.csv'
+table = pd.read_csv(url)
+
+fig, ax = plt.subplots()
+ax.scatter(table.Age, table.Income)
+plt.show()
+1.2 
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+url = 'https://raw.githubusercontent.com/Adelaaas/Data_science_basic_22-23_2/main/home_work_clustering/segmentation%20data.csv'
+table = pd.read_csv(url)
+
+plt.figure(figsize=(10,6))
+sns.displot(
+    data=table.isna().melt(value_name="missing"),
+    y="variable",
+    hue="missing",
+    multiple="fill",
+    aspect=1.25
+1.5
+plt.figure(figsize=(15,12), dpi= 80)
+sns.heatmap(df.corr(), xticklabels=df.corr().columns, yticklabels=df.corr().columns, cmap='RdYlGn', center=0, annot=True)
+plt.title('Матрица корреляции для всех переменных', fontsize=22)
+plt.xticks(fontsize=15)
+plt.yticks(fontsize=15)
+plt.show()
+
+2.1
+for k in range(1,9):
+    kmeans = KMeans(n_clusters = k) 
+    kmeans.fit(df)
+    SSE.append(kmeans.inertia_)
+ 
+plt.plot(range(1,9), SSE, marker='s');
+plt.xlabel('k')
+plt.ylabel('SSE');
+plt.show()
+# выгодно взять 4 кластера
+3.1
+X = df.iloc[:,:-1]
+from scipy.cluster.hierarchy import dendrogram, linkage
+from matplotlib import pyplot as plt
+Z = linkage(X, 'ward')
+
+fig = plt.figure(figsize=(10, 10))
+dn = dendrogram(Z)
+plt.title("Дендрограмма",fontsize=25)
+plt.xlabel("Объекты",fontsize=16)
+plt.ylabel("Расстояние",fontsize=16)
+plt.show()
+#лучше в 4 кластера
