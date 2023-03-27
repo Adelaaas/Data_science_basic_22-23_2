@@ -13,24 +13,24 @@
 ## Структура репозитория
 
 ```
-├── Осенний семестр
-│   ├── class_work_1: *"Основы Python (часть 1)"*
-│   ├── class_work_2: *"Основы Python (часть 2)"*
-│   ├── class_work_3: *"Основы NumPy"*
-│   ├── class_work_4: *"Основы Pandas"*
-│   ├── class_work_5_ML_intro: *"Введение в ML"*
-│   ├── class_work_6_визуализация: *"Исследование данных (EDA) и визуализация (Matplotlib и seaborn"*
-│   ├── class_work_7_clustering: *"Кластеризация. Kmeans"*
-│   ├── class_work_8_Hierarchical_Clustering: *"Кластеризация. Иерархическая"*
+├── **Осенний семестр**
+│   ├── class_work_1: "Основы Python (часть 1)"
+│   ├── class_work_2: "Основы Python (часть 2)"
+│   ├── class_work_3: "Основы NumPy"
+│   ├── class_work_4: "Основы Pandas"
+│   ├── class_work_5_ML_intro: "Введение в ML"
+│   ├── class_work_6_визуализация: "Исследование данных (EDA) и визуализация (Matplotlib и seaborn"
+│   ├── class_work_7_clustering: "Кластеризация. Kmeans"
+│   ├── class_work_8_Hierarchical_Clustering: "Кластеризация. Иерархическая"
 │   ├── home_work_i: папки для загрузки домашних заданий
 ├── Весенний семестр
-│   ├── class_work_1_lin_reg: *"Регрессия. Линейная регрессия"*
-│   ├── class_work_2_log_reg: *"Классифкация. Логистическая регрессия"*
-│   ├── class_work_KNN: *"Классифкация и Регрессия. Метод ближайщих соседей"*
-│   ├── class_work_tree: *"Классифкация и Регрессия. Дерево решений"*
-│   ├── home_work_1_lin_reg: *"Решения дз по линейной регрессии"*
-│   ├── home_work_2_log_reg: *"Решения дз по логистической регрессии"*
-│   ├── kaggle_copmetitions_dz: *"Решения дз kaggle соревнования"*
+│   ├── class_work_1_lin_reg: "Регрессия. Линейная регрессия"
+│   ├── class_work_2_log_reg: "Классифкация. Логистическая регрессия"
+│   ├── class_work_KNN: "Классифкация и Регрессия. Метод ближайщих соседей"
+│   ├── class_work_tree: "Классифкация и Регрессия. Дерево решений"
+│   ├── home_work_1_lin_reg: "Решения дз по линейной регрессии"
+│   ├── home_work_2_log_reg: "Решения дз по логистической регрессии"
+│   ├── kaggle_copmetitions_dz: "Решения дз kaggle соревнования"
 │   ├── Коллоквиум
 └── README.md
 ```
