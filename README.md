@@ -14,7 +14,6 @@
 
 ├── Весенний семестр
 │   ├── controller
-│   │   ├── **/*.css
 │   ├── views
 │   ├── model
 │   ├── index.js
